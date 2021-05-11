@@ -37,3 +37,6 @@ if [ -f ~/.bashrc ]  ; then
 fi
 EOF
 fi
+
+grep "192.168.33.12 gitlab.example.com gitlab" /etc/hosts || echo "192.168.33.12 gitlab.example.com gitlab" >> /etc/hosts
+grep "192.168.33.13 runner.example.com runner" /etc/hosts || echo "192.168.33.13 runner.example.com runner" >> /etc/hosts
