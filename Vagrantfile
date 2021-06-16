@@ -27,6 +27,13 @@ Vagrant.configure(2) do |config|
     ubuntu.vm.provision :shell, path: "#{common_bootstrap}"
   end
 
+  config.vm.define "ubuntu03" do |ubuntu|
+    ubuntu.vm.box = "#{ubuntu_box}"
+    ubuntu.vm.network "private_network", ip: "192.168.33.14"
+    ubuntu.vm.hostname = "staging.example.com"
+    ubuntu.vm.provision :shell, path: "#{common_bootstrap}"
+  end
+
 #  config.vm.define "centos6" do |centos|
 #    centos.vm.box = "#{centos6_box}"
 #    centos.vm.network "private_network", ip: "192.168.33.14"
