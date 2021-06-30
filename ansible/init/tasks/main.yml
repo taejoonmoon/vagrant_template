@@ -1,0 +1,4 @@
+---
+- name: Make app directory
+  file: path=/tmp/var/www state=directory mode=0755
+
