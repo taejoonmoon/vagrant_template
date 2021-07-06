@@ -77,6 +77,9 @@ Vagrant.configure("2") do |config|
     sudo ansible-playbook /vagrant/ansible/playbook.yml
   SHELL
  
-  config.vm.synced_folder ".", "/vagrant"
+#  config.vm.synced_folder ".", "/vagrant"
+
+  config.hostmanager.manage_host = true
+  config.vm.hostname = 'www.example.com'
 
 end
