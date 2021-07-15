@@ -1,2 +1,0 @@
-#- src: git@github.com:VntgCorp/ansible-osconfig.git
-- src: git+ssh://git@github.com/VntgCorp/ansible-osconfig.git
